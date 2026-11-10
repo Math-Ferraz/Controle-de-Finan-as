@@ -14,7 +14,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Permite requisições de qualquer origem (Vercel, Localhost, etc.)
-    allow_credentials=True,
+    allow_credentials=False,  # Não permite envio de cookies
     allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, OPTIONS, etc.
     allow_headers=["*"],  # Permite todos os cabeçalhos
 )
