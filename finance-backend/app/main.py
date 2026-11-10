@@ -13,10 +13,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["*"],  # Permite requisições de qualquer origem (Vercel, Localhost, etc.)
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, OPTIONS, etc.
+    allow_headers=["*"],  # Permite todos os cabeçalhos
 )
 
 # Registra todos os módulos de rotas
